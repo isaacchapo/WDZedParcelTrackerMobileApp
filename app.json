@@ -8,8 +8,18 @@
     "scheme": "zedparceltracker",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.zedparceltracker",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location services to show your position on the map.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs access to location services to show your position on the map."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +31,12 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "build": {
+        "babel": {
+          "include": ["@rnmapbox/maps"]
+        }
+      }
     },
     "plugins": [
       "expo-router",
@@ -32,6 +47,19 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "@rnmapbox/maps",
+        {
+          "accessToken": null,
+          "androidPermissions": [
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION"
+          ],
+          "locationWhenInUsePermission": "Show your location on the map",
+          "locationAlwaysAndWhenInUsePermission": "Show your location on the map",
+          "downloadsPath": "mapbox/downloads"
         }
       ]
     ],

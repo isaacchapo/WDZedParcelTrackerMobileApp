@@ -1,0 +1,127 @@
+import { StyleSheet } from 'react-native';
+
+const profileStyles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    padding: 20,
+    backgroundColor: '#fff',
+  },
+  centered: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    color: '#333',
+  },
+  emailContainer: {
+    backgroundColor: '#f5f5f5',
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 8,
+    color: '#333',
+  },
+  emailText: {
+    fontSize: 16,
+    color: '#666',
+  },
+  input: {
+    backgroundColor: '#f5f5f5',
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 20,
+    fontSize: 16,
+  },
+  updateButton: {
+    backgroundColor: '#0096FF',
+    padding: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginBottom: 15,
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  passwordButton: {
+    backgroundColor: '#4CAF50',
+    padding: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginBottom: 15,
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  logoutButton: {
+    backgroundColor: 'red',
+    padding: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginBottom: 15,
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  deleteButton: {
+    backgroundColor: 'gray',
+    padding: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: '600',
+    marginLeft: 8,
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalContent: {
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 20,
+    width: '90%',
+    maxWidth: 400,
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    textAlign: 'center',
+    color: '#333',
+  },
+  modalButtonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 20,
+  },
+  cancelButton: {
+    backgroundColor: '#999',
+    padding: 15,
+    borderRadius: 10,
+    flex: 1,
+    marginRight: 10,
+    alignItems: 'center',
+  },
+  saveButton: {
+    backgroundColor: '#0096FF',
+    padding: 15,
+    borderRadius: 10,
+    flex: 1,
+    marginLeft: 10,
+    alignItems: 'center',
+  },
+});
+
+export default profileStyles;
