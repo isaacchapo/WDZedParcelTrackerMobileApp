@@ -8,6 +8,7 @@ const homeStyles = StyleSheet.create({
     header: {
         backgroundColor: '#0096FF',
         padding: 20,
+        paddingTop: 60,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
     },

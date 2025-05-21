@@ -134,12 +134,12 @@ export default function RatesScreen() {
       <View style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-            <Ionicons name="arrow-back" size={24} color="#333" />
+            <Ionicons name="arrow-back" size={30} color="#333" />
           </TouchableOpacity>
           <Text style={styles.heading}>Shipping Rate Calculator</Text>
-          <Text style={styles.subHeading}>Calculate shipping costs instantly</Text>
-        </View>
 
+        </View>
+        <Text style={styles.subHeading}>Calculate shipping costs instantly</Text>
         <View style={styles.infoCard}>
           <Text style={styles.infoTitle}>Available Shipping Locations</Text>
           <Text style={styles.infoText}>
@@ -252,6 +252,7 @@ export default function RatesScreen() {
 const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
+    // marginTop: 40,
   },
   container: {
     padding: 16,
@@ -260,19 +261,26 @@ const styles = StyleSheet.create({
   },
   backButton: {
     marginRight: 16,
+    // marginBottom: 16,
   },
   header: {
-    marginBottom: 16,
-    marginTop: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingTop: 60,
+    paddingBottom: 16,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
   },
   heading: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#0096FF',
-    marginBottom: 4,
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#333',
   },
   subHeading: {
-    fontSize: 16,
+    fontSize: 26,
+    padding: 10,
     color: '#757575',
   },
   formCard: {

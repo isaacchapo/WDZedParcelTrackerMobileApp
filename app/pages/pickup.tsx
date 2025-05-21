@@ -98,12 +98,12 @@ export default function PickupScreen() {
       <View style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-            <Ionicons name="arrow-back" size={24} color="#333" />
+            <Ionicons name="arrow-back" size={30} color="#333" />
           </TouchableOpacity>
           <Text style={styles.heading}>Schedule a Pickup</Text>
-          <Text style={styles.subHeading}>We'll come to your location</Text>
+          
         </View>
-
+        <Text style={styles.subHeading}>We'll come to your location</Text>
         <View style={styles.formCard}>
           <View style={styles.inputGroup}>
             <Text style={styles.label}>Pickup Address</Text>
@@ -144,7 +144,7 @@ export default function PickupScreen() {
           <View style={styles.inputGroup}>
             <Text style={styles.label}>Preferred Date & Time</Text>
             <TouchableOpacity onPress={() => setShowPicker(true)} style={styles.input}>
-              <Text style={{ color: date ? '#000' : '#aaa' }}>
+              <Text style={{ color: date ? 'black' : 'black' }}>
                 {date ? date.toLocaleString() : 'Select date & time'}
               </Text>
             </TouchableOpacity>
@@ -154,6 +154,7 @@ export default function PickupScreen() {
                 value={date}
                 mode="datetime"
                 display={Platform.OS === 'ios' ? 'spinner' : 'default'}
+                textColor={Platform.OS === 'ios' ? 'black' : undefined}
                 onChange={onChange}
               />
             )}
@@ -253,17 +254,23 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    marginBottom: 16,
-    marginTop: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingTop: 60,
+    paddingBottom: 16,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
   },
   heading: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#0096FF',
-    marginBottom: 4,
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#333',
   },
   subHeading: {
-    fontSize: 16,
+    fontSize: 26,
+    padding: 10,
     color: '#757575',
   },
   formCard: {
@@ -282,6 +289,7 @@ const styles = StyleSheet.create({
   },
   backButton: {
     marginRight: 16,
+    // marginBottom: 16,
   },
   label: {
     fontSize: 14,

@@ -4,6 +4,7 @@ const profileStyles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 20,
+    paddingTop: 60,
     backgroundColor: '#fff',
   },
   centered: {

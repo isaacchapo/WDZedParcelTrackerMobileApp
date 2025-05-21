@@ -18,7 +18,7 @@ import { logActivity } from '@/utils/logActivity';
 import { generateMockTrackingUpdates } from '@/utils/trackingUtils';
 import styles from '@/assets/styles/parcelID';
 import getStatusIcon from '@/components/getStatutsIcons';
-import ReusableMapComponent from '@/utils/ReusableMapComponent';
+// import ReusableMapComponent from '@/utils/ReusableMapComponent';
 
 interface Parcel {
   id: string;
@@ -163,8 +163,8 @@ export default function ParcelScreen() {
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Parcel Details</Text>
         </View>
-        <View style={styles.header}>
-          <ReusableMapComponent
+        {/* <View style={styles.header}> */}
+          {/* <ReusableMapComponent
             initialLocation={{
               address: parcel.current_location
             }}
@@ -173,8 +173,8 @@ export default function ParcelScreen() {
             showSearch={false}
             onLocationSelect={(location) => {
               setDestination(parcel.destination ?? null);
-            }} />
-        </View>
+            }} /> */}
+        {/* </View> */}
         <View style={styles.card}>
           <Text style={styles.cardTitle}>Tracking Number</Text>
           <Text style={[styles.detailText, styles.trackingNumber]}>#{parcel.tracking_number}</Text>

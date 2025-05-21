@@ -13,28 +13,15 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.yourcompany.zedparceltracker",
-      "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "This app needs access to location services to show your position on the map.",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs access to location services to show your position on the map."
-      }
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
-    },
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png",
       "build": {
         "babel": {
-          "include": ["@rnmapbox/maps"]
+          "include": [
+            "@rnmapbox/maps"
+          ]
         }
       }
     },
@@ -61,10 +48,63 @@
           "locationAlwaysAndWhenInUsePermission": "Show your location on the map",
           "downloadsPath": "mapbox/downloads"
         }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ffffff",
+          "sounds": [
+            "./assets/notification-sound.wav"
+          ]
+        }
       ]
     ],
+    "android": {
+      "package": "com.webdevtechnologies.zedparceltracker",
+      "googleServicesFile": "./google-services.json",
+      "useNextNotificationsApi": true,
+      "permissions": [
+        "NOTIFICATIONS"
+      ],
+      "notification": {
+        "icon": "./assets/notification-icon.png",
+        "color": "#ffffff",
+        "sound": true,
+        "mode": "default",
+        "priority": "max",
+        "vibrate": [
+          0,
+          250,
+          250,
+          250
+        ]
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.webdevtechnologies.zedparceltracker",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSUserTrackingUsageDescription": "This identifier will be used to deliver personalized notifications.",
+        "UIBackgroundModes": [
+          "remote-notification"
+        ],
+        "UNNotificationAlertStyle": "banner"
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "buildNumber": "1.0.0"
+    },
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "9e3deaf3-ed82-4018-a594-c4d0d03511fd"
+      }
+    },
+    "owner": "pukuta"
   }
 }

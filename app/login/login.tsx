@@ -84,7 +84,7 @@ export default function Login() {
         } else if(data.session){
             setSession(data.session);
             Toast.show({
-                type: 'Success',
+                type: 'success',
                 text1: 'Login Success',
                 text2: 'You are now logged in!',
             });

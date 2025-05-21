@@ -148,7 +148,7 @@ export default function TrackScreen() {
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#333" />
+          <Ionicons name="arrow-back" size={34} color="#333" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Track Parcel</Text>
       </View>

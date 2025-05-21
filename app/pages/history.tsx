@@ -67,12 +67,11 @@ export default function HistoryScreen() {
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#333" />
+          <Ionicons name="arrow-back" size={30} color="#333" />
         </TouchableOpacity>
         <Text style={styles.heading}>Tracking History</Text>
-        <Text style={styles.subHeading}>{parcels.length} parcels found</Text>
       </View>
-
+      <Text style={styles.subHeading}>{parcels.length} parcels found</Text>
       {parcels.length === 0 ? (
         <View style={styles.emptyState}>
           <Text style={styles.emptyStateText}>No tracking history found</Text>
@@ -139,16 +138,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#FAFAFA'
   },
   header: {
-    marginBottom: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingTop: 60,
+    paddingBottom: 16,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
   },
   heading: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#0096FF',
-    marginBottom: 4,
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#333',
   },
   subHeading: {
-    fontSize: 16,
+    fontSize: 26,
+    padding: 10,
     color: '#757575',
   },
   listContent: {
@@ -213,6 +219,7 @@ const styles = StyleSheet.create({
   },
   backButton: {
     marginRight: 16,
+    // marginBottom: 16,
   },
   dateText: {
     color: '#9E9E9E',

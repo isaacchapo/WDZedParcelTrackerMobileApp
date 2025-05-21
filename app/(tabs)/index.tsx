@@ -201,7 +201,7 @@ export default function HomeScreen() {
   const actionItems: ActionItem[] = [
     { label: 'Check Rate', icon: 'monetization-on' },
     { label: 'Pick Up', icon: 'local-shipping' },
-    { label: 'Drop Off', icon: 'location-on' },
+    // { label: 'Drop Off', icon: 'location-on' },
     { label: 'History', icon: 'history' },
   ];
 

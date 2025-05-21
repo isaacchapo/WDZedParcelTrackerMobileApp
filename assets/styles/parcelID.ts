@@ -55,7 +55,12 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 20,
+    paddingHorizontal: 16,
+    paddingTop: 60,
+    paddingBottom: 16,
+    // backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
   },
   headerTitle: {
     fontSize: 20,
